@@ -7,6 +7,8 @@ namespace Event__Project.Domains
     [Table("Evento")]
     public class Evento
     {
+        internal static object Tituloevento;
+
         [Key]
         public Guid IdEvento { get; set; }
 

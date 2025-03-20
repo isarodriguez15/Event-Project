@@ -12,6 +12,11 @@ namespace Event__Project.Domains
             [Column(TypeName = "VARCHAR(60)")]
             [Required(ErrorMessage = "O Título tipo evento é obrigatório")]
             public string? TituloEvento { get; set; }
+
+        public static implicit operator TipoEventos(Range v)
+        {
+            throw new NotImplementedException();
         }
+    }
     }
 
