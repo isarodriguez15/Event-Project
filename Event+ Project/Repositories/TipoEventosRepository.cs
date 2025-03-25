@@ -19,7 +19,6 @@ namespace Event__Project.Repositories
 
             if (tiposEventosBuscado != null)
             {
-                tiposEventosBuscado.IdTipoEvento = tipoEvento.IdTipoEvento;
                 tiposEventosBuscado.TituloEvento = tipoEvento.TituloEvento;
 
                 _context.TipoEventos.Update(tiposEventosBuscado);
@@ -29,8 +28,16 @@ namespace Event__Project.Repositories
 
         public TipoEventos BuscarPorId(Guid id)
         {
-            TipoEventos tiposEventoBuscado = _context.TipoEventos.Find(id)!;
-            return tiposEventoBuscado;
+            try
+            {
+                TipoEventos tiposEventoBuscado = _context.TipoEventos.Find(id)!;
+                return tiposEventoBuscado;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void Cadastrar(TipoEventos novoTipoEvento)
@@ -68,7 +75,16 @@ namespace Event__Project.Repositories
 
         public List<TipoEventos> Listar()
         {
-            return _context.TipoEventos.ToList();
+            try
+            {
+                List<TipoEventos> ListarEventos = _context.TipoEventos.ToList();
+                return _context.TipoEventos.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

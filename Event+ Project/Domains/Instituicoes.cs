@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
+using Event__Project.Interfaces;
 
 namespace Event__Project.Domains
 {
@@ -25,6 +26,8 @@ namespace Event__Project.Domains
             [Required(ErrorMessage = "O nomefantasia é obrigatório")]
 
             public string? NomeFantasia { get; set; }
-        }
+
+         
+    }
     }
 

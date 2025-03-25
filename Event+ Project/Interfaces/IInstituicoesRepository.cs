@@ -22,6 +22,8 @@ namespace Event__Project.Interfaces
 
     public class Instituicoes
     {
+        public object? IdInstituicao { get; internal set; }
+        public object? NomeFantasia { get; internal set; }
     }
 }
 

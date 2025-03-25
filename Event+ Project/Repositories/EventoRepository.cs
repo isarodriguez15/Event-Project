@@ -59,17 +59,43 @@ namespace Event__Project.Repositories
 
         public List<Evento> Listar()
         {
-            return _context.Eventos.ToList();
+
+            try
+            {
+                List<Evento> listaEvento = _context.Eventos.ToList();
+                return listaEvento;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
         public List<Evento> ListarPorId(Guid id)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                List<Evento> listaEvento = _context.Eventos.Where(p => p.IdEvento == id).ToList();
+                return listaEvento;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+
         }
 
         public List<Evento> ListarProximosEventos(Guid id)
         {
-            throw new NotImplementedException();
+
+            {
+                List<Evento> listarEventosProximos = _context.Eventos.Where(e => e.DataEvento > DateTime.Now).OrderBy(e => e.DataEvento).ToList();
+                return listarEventosProximos;
+            }
+
         }
     }
 }

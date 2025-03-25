@@ -3,20 +3,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Event__Project.Domains
 {
-    [Table("TipoEvento")]
+    [Table("TipoEventos")]
     public class TipoEventos
     {
             [Key]
-            public Guid IdTipoEvento { get; set; }
+            public Guid IdTipoEventos { get; set; }
 
             [Column(TypeName = "VARCHAR(60)")]
             [Required(ErrorMessage = "O Título tipo evento é obrigatório")]
             public string? TituloEvento { get; set; }
 
-        public static implicit operator TipoEventos(Range v)
-        {
-            throw new NotImplementedException();
-        }
     }
-    }
+}
 

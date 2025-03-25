@@ -46,17 +46,44 @@ namespace Event__Project.Repositories
 
         public void Inscrever(PresencaEventos inscreverPresenca)
         {
-            throw new NotImplementedException();
+            try
+            {
+                inscreverPresenca.IdPresencaEvento = Guid.NewGuid();
+
+                _context.PresencaEventos.Add(inscreverPresenca);
+
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public List<PresencaEventos> Listar()
         {
-            return _context.PresencaEventos.ToList();
+            try
+            {
+                List<PresencaEventos> listaPresenca = _context.PresencaEventos.ToList();
+                return listaPresenca;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public List<PresencaEventos> ListarMinhasPresencas(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<PresencaEventos> listaPresenca = _context.PresencaEventos.Where(p => p.IdUsuario == id).ToList();
+                return listaPresenca;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

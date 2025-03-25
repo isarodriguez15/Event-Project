@@ -25,7 +25,7 @@ namespace Event__Project.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-A2J49GH\\SQLEXPRESS; Database=EventPlus; TrustServerCertificate=true; User Id=sa; Pwd=Senai@134;");
+                optionsBuilder.UseSqlServer("Server= DESKTOP-A2J49GH\\SQLEXPRESS; Database=EventPlus; TrustServerCertificate=true; User Id=sa; Pwd=Senai@134;");
             }
         }
     }

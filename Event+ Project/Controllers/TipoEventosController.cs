@@ -34,7 +34,7 @@ namespace Event__Project.Controllers
         }
         //deletar
         [HttpDelete("{id}")]
-        public IActionResult DeleteById(Guid id)
+        public IActionResult Delete(Guid id)
         {
             try
             {

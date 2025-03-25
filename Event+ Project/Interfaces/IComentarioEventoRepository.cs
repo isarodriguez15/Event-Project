@@ -11,5 +11,6 @@ namespace Event__Project.Interfaces
         List<ComentarioEvento> Listar(Guid idComentario);
 
         ComentarioEvento BuscarIdUsuario(Guid UsuarioID, Guid EventosID);
+
     }
 }

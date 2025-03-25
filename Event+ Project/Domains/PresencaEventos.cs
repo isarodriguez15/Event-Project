@@ -22,6 +22,6 @@ namespace Event__Project.Domains
         public Guid IdEvento { get; set; }
         [ForeignKey("IdEvento")]
         public Evento? Evento { get; set; }
-        public object NomePresencaeventos { get; internal set; }
+        public object? NomePresencaeventos { get; internal set; }
     }
 }

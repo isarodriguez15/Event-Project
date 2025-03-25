@@ -4,8 +4,6 @@ namespace Event__Project.Interfaces
 {
     public interface IUsuariosRepository
     {
-
-
         void Cadastrar(Usuarios novoUsuario);
 
         Usuarios BuscarPorId(Guid id);
