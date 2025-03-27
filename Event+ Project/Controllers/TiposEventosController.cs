@@ -16,6 +16,7 @@ namespace Event__Project.Controllers
         {
             _tiposEventosRepository = tiposEventosRepository;
         }
+
         //cadastrar
         [HttpPost]
         public IActionResult Post(TipoEventos tiposEventos)
@@ -24,6 +25,7 @@ namespace Event__Project.Controllers
             {
                 _tiposEventosRepository.Cadastrar(tiposEventos);
 
+                //return StatusCode(201, tiposEvento);
                 return Created();
             }
             catch (Exception e)
@@ -41,10 +43,11 @@ namespace Event__Project.Controllers
                 _tiposEventosRepository.Deletar(id);
                 return NoContent();
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                return BadRequest(e.Message);
+
             }
         }
         //listar
@@ -53,6 +56,7 @@ namespace Event__Project.Controllers
         {
             try
             {
+                //  return Ok(_tiposEventosRepository.Listar());
                 List<TipoEventos> listaDeEventos = _tiposEventosRepository.Listar();
                 return Ok(listaDeEventos);
             }
@@ -69,6 +73,7 @@ namespace Event__Project.Controllers
         {
             try
             {
+                // return Ok(_tiposEventosRepository.BuscarPorId(id));
                 TipoEventos tiposEventosBuscado = _tiposEventosRepository.BuscarPorId(id);
                 return Ok(tiposEventosBuscado);
             }
@@ -88,6 +93,7 @@ namespace Event__Project.Controllers
                 _tiposEventosRepository.Atualizar(id, tiposEventos);
 
                 return NoContent();
+                //return StatusCode(204, tipoEvento);
             }
             catch (Exception e)
             {

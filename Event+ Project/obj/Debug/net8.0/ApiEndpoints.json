@@ -164,6 +164,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "webapi.event_.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "webapi.event_.DTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Event__Project.Controllers.PresencaEventosController",
+    "Method": "Post",
+    "RelativePath": "api/PresencaEventos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "presencaEventos",
+        "Type": "Event__Project.Domains.PresencaEventos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Event__Project.Controllers.PresencaEventosController",
     "Method": "Delete",
     "RelativePath": "api/PresencaEventos/{id}",
@@ -218,7 +250,7 @@
   },
   {
     "ContainingType": "Event__Project.Controllers.PresencaEventosController",
-    "Method": "Get",
+    "Method": "GetByMe",
     "RelativePath": "api/PresencaEventos/ListarMinhasPresencas/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -349,7 +381,7 @@
   },
   {
     "ContainingType": "Event__Project.Controllers.TiposUsuariosController",
-    "Method": "DeleteById",
+    "Method": "Delete",
     "RelativePath": "api/TiposUsuarios/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,

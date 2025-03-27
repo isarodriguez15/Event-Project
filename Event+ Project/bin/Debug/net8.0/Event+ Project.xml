@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Event+ Project</name>
+    </assembly>
+    <members>
+        <member name="M:Event__Project.Controllers.EventoController.Post(Event__Project.Domains.Evento)">
+            <summary>
+            Endpoint para cadastrar novo evento
+            </summary>
+        </member>
+        <member name="M:Event__Project.Controllers.PresencaEventosController.Delete(System.Guid)">
+            <summary>
+            Endpoint para deletar a presença
+            </summary>
+        </member>
+        <member name="M:Event__Project.Controllers.PresencaEventosController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar por Id a presença
+            </summary>
+        </member>
+        <member name="M:Event__Project.Controllers.PresencaEventosController.Put(System.Guid,Event__Project.Domains.PresencaEventos)">
+            <summary>
+            Endpoint para atualizar as presenças
+            </summary>
+        </member>
+        <member name="M:Event__Project.Controllers.PresencaEventosController.Get">
+            <summary>
+            Endpoint para fazer uma lista das presenças
+            </summary>
+        </member>
+        <member name="M:Event__Project.Controllers.PresencaEventosController.GetByMe(System.Guid)">
+            <summary>
+            Endpoint para fazer uma lista das minhas presenças
+            </summary>
+        </member>
+        <member name="T:Event__Project.Migrations.DbEventPlus">
+            <inheritdoc />
+        </member>
+        <member name="M:Event__Project.Migrations.DbEventPlus.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Event__Project.Migrations.DbEventPlus.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Event__Project.Migrations.DbEventPlus.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:EventPlus_.Controller.ComentarioEventoController.Post(Event__Project.Domains.ComentarioEvento)">
+            <summary>
+            Endpoint para cadastrar novo comentario do evento
+            </summary>
+        </member>
+        <member name="M:EventPlus_.Controller.ComentarioEventoController.Delete(System.Guid)">
+            <summary>
+            Endpoint para deletar novo comentario do evento
+            </summary>
+        </member>
+        <member name="M:EventPlus_.Controller.ComentarioEventoController.Get(System.Guid)">
+            <summary>
+            Endpoint para listar comentarios do evento
+            </summary>
+        </member>
+        <member name="M:EventPlus_.Controller.ComentarioEventoController.GetById(System.Guid,System.Guid)">
+            <summary>
+            Endpoint para buscar por id o comentario do usuario do evento
+            </summary>
+        </member>
+        <member name="M:EventPlus_.Controller.UsuarioController.Post(Event__Project.Domains.Usuarios)">
+            <summary>
+            Endpoint para cadastrar novo usuario
+            </summary>
+        </member>
+        <member name="M:EventPlus_.Controller.UsuarioController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar usuario por Id
+            </summary>
+        </member>
+        <member name="M:webapi.event_.Controllers.LoginController.Login(webapi.event_.DTO.LoginDTO)">
+            <summary>
+            Endpoint para realizar a autenticação (Login)
+            </summary>
+            <param name="loginDTO">Email e senha do usuário</param>
+            <returns>Token de acesso</returns>
+        </member>
+    </members>
+</doc>

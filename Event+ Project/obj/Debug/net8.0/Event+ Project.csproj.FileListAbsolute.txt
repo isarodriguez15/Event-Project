@@ -352,3 +352,5 @@ C:\Users\46206573877\Desktop\Event-Project\Event+ Project\obj\Debug\net8.0\Event
 C:\Users\46206573877\Desktop\Event-Project\Event+ Project\obj\Debug\net8.0\Event+ Project.genruntimeconfig.cache
 C:\Users\46206573877\Desktop\Event-Project\Event+ Project\obj\Debug\net8.0\ref\Event+ Project.dll
 C:\Users\46206573877\Desktop\Event-Project\Event+ Project\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\46206573877\Desktop\Event-Project\Event+ Project\bin\Debug\net8.0\Event+ Project.xml
+C:\Users\46206573877\Desktop\Event-Project\Event+ Project\obj\Debug\net8.0\Event+ Project.xml

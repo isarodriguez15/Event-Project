@@ -1,5 +1,6 @@
 ﻿using Event__Project.Domains;
 using Event__Project.Interfaces;
+using Event__Project.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -29,9 +30,24 @@ namespace Event__Project.Controllers
                 _presencaRepository.Deletar(id);
                 return NoContent();
             }
-            catch (Exception error)
+            catch (Exception e)
             {
-                return BadRequest(error.Message);
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpPost]
+        public IActionResult Post(PresencaEventos presencaEventos)
+        {
+            try
+            {
+                _presencaRepository.Inscrever(presencaEventos);
+
+                return StatusCode(201);
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
             }
         }
 
@@ -46,9 +62,9 @@ namespace Event__Project.Controllers
                 PresencaEventos novaPresenca = _presencaRepository.BuscarPorId(id);
                 return Ok(novaPresenca);
             }
-            catch (Exception error)
+            catch (Exception e)
             {
-                return BadRequest(error.Message);
+                return BadRequest(e.Message);
             }
         }
 
@@ -91,16 +107,16 @@ namespace Event__Project.Controllers
         /// Endpoint para fazer uma lista das minhas presenças
         /// </summary>
         [HttpGet("ListarMinhasPresencas/{id}")]
-        public IActionResult Get(Guid id)
+        public IActionResult GetByMe(Guid id)
         {
             try
             {
                 List<PresencaEventos> listaMinhasPresencas = _presencaRepository.ListarMinhasPresencas(id);
                 return Ok(listaMinhasPresencas);
             }
-            catch (Exception error)
+            catch (Exception e)
             {
-                return BadRequest(error.Message);
+                return BadRequest(e.Message);
             }
         }
     }

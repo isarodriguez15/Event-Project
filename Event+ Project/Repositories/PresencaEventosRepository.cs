@@ -20,7 +20,7 @@ namespace Event__Project.Repositories
 
             if (PresencaeventosBuscado != null)
             {
-                PresencaeventosBuscado.NomePresencaeventos = presenca.NomePresencaeventos;
+                PresencaeventosBuscado.Situacao = presenca.Situacao;
             }
         }
 

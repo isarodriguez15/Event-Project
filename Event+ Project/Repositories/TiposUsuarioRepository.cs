@@ -17,7 +17,7 @@ namespace Event__Project.Repositories
         public void Atualizar(Guid id, TiposUsuario tipoUsuario)
         {
 
-            TiposUsuario tiposUsuarioBuscado = _context.TiposUsuarios.Find(id)!;
+            TiposUsuario tiposUsuarioBuscado = _context.TiposUsuario.Find(id)!;
 
             if (tiposUsuarioBuscado != null)
             {
@@ -30,7 +30,7 @@ namespace Event__Project.Repositories
         public TiposUsuario BuscarPorId(Guid id)
         {
 
-            TiposUsuario tiposUsuarioBuscado = _context.TiposUsuarios.Find(id)!;
+            TiposUsuario tiposUsuarioBuscado = _context.TiposUsuario.Find(id)!;
             return tiposUsuarioBuscado;
         }
 
@@ -38,7 +38,7 @@ namespace Event__Project.Repositories
         {
             try
             {
-                _context.TiposUsuarios.Add(tipoUsuario);
+                _context.TiposUsuario.Add(tipoUsuario);
                 _context.SaveChanges();
             }
             catch (Exception)
@@ -53,11 +53,11 @@ namespace Event__Project.Repositories
 
             try
             {
-                TiposUsuario tiposUsuario = _context.TiposUsuarios.Find(id)!;
+                TiposUsuario tiposUsuario = _context.TiposUsuario.Find(id)!;
 
                 if (tiposUsuario != null)
                 {
-                    _context.TiposUsuarios.Remove(tiposUsuario);
+                    _context.TiposUsuario.Remove(tiposUsuario);
                 }
                 _context.SaveChanges();
             }
@@ -72,7 +72,7 @@ namespace Event__Project.Repositories
         {
             try
             {
-                List<TiposUsuario> listaDeUsuarios = _context.TiposUsuarios.ToList();
+                List<TiposUsuario> listaDeUsuarios = _context.TiposUsuario.ToList();
                 return listaDeUsuarios;
             }
             catch (Exception)

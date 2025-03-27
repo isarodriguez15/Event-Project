@@ -7,8 +7,6 @@ namespace Event__Project.Domains
     [Table("Evento")]
     public class Evento
     {
-        internal static object? Tituloevento;
-    
         [Key]
         public Guid IdEvento { get; set; }
 
@@ -25,10 +23,12 @@ namespace Event__Project.Domains
         public string? Descricao { get; set; }
 
         public Guid IdTipoEvento { get; set; }
+
         [ForeignKey("IdTipoEvento")]
         public TipoEventos? TiposEvento { get; set; }
 
         public Guid IdInstituicao { get; set; }
+
         [ForeignKey("IdInstituicao")]
         public Institucoes? Instituicao { get; set; }
 
